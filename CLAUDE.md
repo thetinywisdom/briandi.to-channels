@@ -1,6 +1,6 @@
 # briandi.to-channels
 
-Content for the channel TV on the portfolio site `thetinywisdom/briandi.to`: the KV-5200 portable, which has 14 channels (2–13, U1, U2). Channel 2 is the guide, built by the site; channels 3–13, U1 and U2 come from `channels.json` here.
+Content for the channel TV on the portfolio site `thetinywisdom/briandi.to`: the KV-5200 portable, which has 14 channels (1–12, U1, U2). Channel 1 is the guide, built by the site; channels 2–12, U1 and U2 come from `channels.json` here.
 
 Read `PLAN.md` in the `briandi.to` repository for what is done, what is open and what the owner has decided. `README.md` here is the owner's editing guide; keep it in step with the format.
 
@@ -16,7 +16,7 @@ The owner's preview artifact cannot fetch from GitHub, so the preview build publ
 { "channels": [ { "channel": 3, "title": "Studio tour", "youtube": "https://www.youtube.com/watch?v=..." } ] }
 ```
 
-- `channel`: 3–13 or "U1" / "U2", each once.
+- `channel`: 2–12 or "U1" / "U2", each once.
 - Exactly one of `youtube` (any normal YouTube link), `spotify` (an open.spotify.com link), `image` (a .gif or .webp path under `media/`) or `images` (a list of such paths, played in a loop: each runs its full animation once, then the next; the site reads the frame timings from the file). Paths may include folders, e.g. `bianconeri/x.gif`.
 - `title`: shown in the guide; about 12 characters fit.
 

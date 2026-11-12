@@ -3,7 +3,7 @@
 // Run with: node scripts/check.mjs
 import { readFileSync, existsSync, statSync } from 'node:fs';
 
-const CHANNELS = ['3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', 'U1', 'U2'];
+const CHANNELS = ['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'U1', 'U2'];
 const problems = [];
 let data;
 try {
@@ -18,7 +18,7 @@ const seen = new Set();
 for (const [i, c] of (list || []).entries()) {
   const where = `line ${i + 1} of the list`;
   const ch = String(c?.channel ?? '').toUpperCase();
-  if (!CHANNELS.includes(ch)) { problems.push(`${where}: "channel" must be 3 to 13, "U1" or "U2" (got ${JSON.stringify(c?.channel)})`); continue; }
+  if (!CHANNELS.includes(ch)) { problems.push(`${where}: "channel" must be 2 to 12, "U1" or "U2" (got ${JSON.stringify(c?.channel)})`); continue; }
   if (seen.has(ch)) problems.push(`channel ${ch} is listed more than once`);
   seen.add(ch);
   const sources = ['youtube', 'spotify', 'image', 'images'].filter((k) => c[k]);
