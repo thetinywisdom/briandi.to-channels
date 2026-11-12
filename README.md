@@ -23,8 +23,8 @@ Everything is in `channels.json`. Each channel is one line between the square br
 | --- | --- |
 | `channel` | `3` to `13`, or `"U1"` / `"U2"` (with quotes). Each channel once |
 | `title` | The name shown in the channel guide on channel 2. Short works best: about 12 characters fit |
-| `youtube` | A normal YouTube link (watch, youtu.be, Shorts or live links all work). It starts playing without sound; visitors can turn the sound on |
-| `spotify` | A normal Spotify link to a track, album, playlist, episode or show. Visitors press its play button |
+| `youtube` | A normal YouTube link (watch, youtu.be, Shorts or live links all work). It starts playing with sound when a visitor tunes in, at the TV's volume; the TV's volume slider and the Sound key on the pager control it. A browser that blocks sound (Safari sometimes does) plays it silently until the visitor's next click |
+| `spotify` | A normal Spotify link to a track, album, playlist, episode or show. Visitors press its play button; its volume is set in the Spotify player itself |
 | `image` | The name of a GIF or WebP file you uploaded to the `media` folder |
 
 Give each channel one of `youtube`, `spotify` or `image`.
