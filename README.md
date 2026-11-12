@@ -37,7 +37,7 @@ A channel that is not listed shows static, like a real TV.
 
 ## Add a picture
 
-Open the `media` folder on GitHub, choose **Add file → Upload files**, and drop in GIF or WebP files. Then use the file name as `image` in `channels.json`. To keep a set of files together, make a folder inside `media` (type `name/` in front of the file name when uploading). Keep files under about 5 MB each so the TV starts quickly. Wide pictures are shown whole, with black bars above and below, like a wide picture on an old TV. While a picture channel is on, the pager shows the file name as "now playing".
+Open the `media` folder on GitHub, choose **Add file → Upload files**, and drop in GIF or WebP files. Then use the file name as `image` in `channels.json`. To keep a set of files together, make a folder inside `media` (type `name/` in front of the file name when uploading). Keep files under about 5 MB each so the TV starts quickly. Pictures fill the screen and keep their shape: a picture that is wider than the TV (most GIFs are) has its sides cut off, never stretched. While a picture channel is on, the pager shows the file name as "now playing".
 
 ## Files
 
