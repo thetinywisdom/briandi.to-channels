@@ -28,6 +28,7 @@ for (const [i, c] of (list || []).entries()) {
     if (typeof c.audio !== 'string' || !/\.(m4a|mp3|aac|ogg|opus|wav)$/i.test(c.audio)) problems.push(`channel ${ch}: "audio" should be an .m4a, .mp3, .aac, .ogg, .opus or .wav file`);
     else if (!existsSync(`media/${c.audio}`)) problems.push(`channel ${ch}: media/${c.audio} is not in the media folder (check the spelling and capitals)`);
   }
+  if (c.interference !== undefined && typeof c.interference !== 'boolean') problems.push(`channel ${ch}: "interference" should be true or false (no quotes)`);
   if (c.scroll !== undefined && (!Array.isArray(c.scroll) || !c.scroll.length)) problems.push(`channel ${ch}: "scroll" should be a list of file names: [ "1.jpg", "2.jpg" ]`);
   for (const file of Array.isArray(c.scroll) ? c.scroll : []) {
     if (typeof file !== 'string' || !/\.(jpe?g|png|webp|gif)$/i.test(file)) { problems.push(`channel ${ch}: ${JSON.stringify(file)} should be a .jpg, .png, .webp or .gif file`); continue; }

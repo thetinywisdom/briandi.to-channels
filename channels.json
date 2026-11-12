@@ -12,7 +12,8 @@
         "bayangkan/7.jpg",
         "bayangkan/1.jpg"
       ],
-      "audio": "bayangkan/hindia-bayangkan-jika-kita-tidak-menyerah.m4a" },
+      "audio": "bayangkan/hindia-bayangkan-jika-kita-tidak-menyerah.m4a",
+      "interference": true },
     { "channel": 10, "title": "Bianconeri", "images": [
         "bianconeri/del-piero-juventus.gif",
         "bianconeri/bonucci-juve.gif",
