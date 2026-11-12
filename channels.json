@@ -1,6 +1,19 @@
 {
   "channels": [
     { "channel": 3, "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" },
-    { "channel": 4, "title": "Free PLSTN", "image": "free-plstn.gif" }
+    { "channel": 4, "title": "Free PLSTN", "image": "free-plstn.gif" },
+    { "channel": 10, "title": "Bianconeri", "images": [
+        "bianconeri/del-piero-juventus.gif",
+        "bianconeri/bonucci-juve.gif",
+        "bianconeri/chiellini-dybala.gif",
+        "bianconeri/chiellini-szczesny.gif",
+        "bianconeri/del-piero-alessandro.gif",
+        "bianconeri/dybalamask-juventus.gif",
+        "bianconeri/flying-ronaldo.gif",
+        "bianconeri/gianluigi-buffon.gif",
+        "bianconeri/kenan-yildiz-yildiz.gif",
+        "bianconeri/pogba-dab.gif",
+        "bianconeri/real-madrid-mandzukic.gif"
+      ] }
   ]
 }

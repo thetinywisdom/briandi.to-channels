@@ -21,13 +21,15 @@ for (const [i, c] of (list || []).entries()) {
   if (!CHANNELS.includes(ch)) { problems.push(`${where}: "channel" must be 3 to 13, "U1" or "U2" (got ${JSON.stringify(c?.channel)})`); continue; }
   if (seen.has(ch)) problems.push(`channel ${ch} is listed more than once`);
   seen.add(ch);
-  const sources = ['youtube', 'spotify', 'image'].filter((k) => c[k]);
-  if (sources.length !== 1) problems.push(`channel ${ch}: give exactly one of "youtube", "spotify" or "image"`);
+  const sources = ['youtube', 'spotify', 'image', 'images'].filter((k) => c[k]);
+  if (sources.length !== 1) problems.push(`channel ${ch}: give exactly one of "youtube", "spotify", "image" or "images"`);
   if (c.youtube && !/^https:\/\/(www\.|m\.)?(youtube\.com|youtu\.be)\//.test(c.youtube)) problems.push(`channel ${ch}: "youtube" should be a https://www.youtube.com/... or https://youtu.be/... link`);
   if (c.spotify && !/^https:\/\/open\.spotify\.com\//.test(c.spotify)) problems.push(`channel ${ch}: "spotify" should be a https://open.spotify.com/... link`);
-  if (c.image) {
-    if (!/\.(gif|webp)$/i.test(c.image)) problems.push(`channel ${ch}: "image" should be a .gif or .webp file`);
-    const path = `media/${c.image}`;
+  if (c.images !== undefined && (!Array.isArray(c.images) || !c.images.length)) problems.push(`channel ${ch}: "images" should be a list of file names: [ "a.gif", "b.gif" ]`);
+  const files = c.image ? [c.image] : Array.isArray(c.images) ? c.images : [];
+  for (const file of files) {
+    if (typeof file !== 'string' || !/\.(gif|webp)$/i.test(file)) { problems.push(`channel ${ch}: ${JSON.stringify(file)} should be a .gif or .webp file`); continue; }
+    const path = `media/${file}`;
     if (!existsSync(path)) problems.push(`channel ${ch}: ${path} is not in the media folder (check the spelling and capitals)`);
     else if (statSync(path).size > 8 * 1024 * 1024) console.warn(`channel ${ch}: ${path} is over 8 MB and will be slow to start`);
   }
