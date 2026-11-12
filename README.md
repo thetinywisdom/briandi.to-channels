@@ -27,7 +27,7 @@ Everything is in `channels.json`. Each channel is one line between the square br
 | `youtube` | A normal YouTube link (watch, youtu.be, Shorts or live links all work). It starts playing with sound when a visitor tunes in, at the TV's volume; the TV's volume slider and the Sound key on the pager control it. A browser that blocks sound (Safari sometimes does) plays it silently until the visitor's next click |
 | `spotify` | A normal Spotify link to a track, album, playlist, episode or show. Visitors press its play button; its volume is set in the Spotify player itself |
 | `image` | The name of a GIF or WebP file you uploaded to the `media` folder |
-| `images` | Several GIF or WebP files, in square brackets. They play one after another, round and round without stopping: each plays its whole animation (short ones repeat until about 6 seconds), then the next one comes on. A file in a folder inside `media` is written with the folder name, like `bianconeri/clip-1.gif` |
+| `images` | Several GIF or WebP files, in square brackets. They play one after another, round and round without stopping: each plays its whole animation once, then the next one comes on. A file in a folder inside `media` is written with the folder name, like `bianconeri/clip-1.gif` |
 
 Give each channel one of `youtube`, `spotify`, `image` or `images`.
 
