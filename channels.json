@@ -2,6 +2,17 @@
   "channels": [
     { "channel": 3, "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" },
     { "channel": 4, "title": "Free PLSTN", "image": "free-plstn.gif" },
+    { "channel": 5, "title": "Bayangkan Jika Kita Tidak Menyerah",
+      "scroll": [
+        "bayangkan/1.jpg",
+        "bayangkan/2.jpg",
+        "bayangkan/3.jpg",
+        "bayangkan/4.jpg",
+        "bayangkan/5.jpg",
+        "bayangkan/6.jpg",
+        "bayangkan/7.jpg"
+      ],
+      "audio": "bayangkan/hindia-bayangkan-jika-kita-tidak-menyerah.m4a" },
     { "channel": 10, "title": "Bianconeri", "images": [
         "bianconeri/del-piero-juventus.gif",
         "bianconeri/bonucci-juve.gif",

@@ -29,7 +29,10 @@ Everything is in `channels.json`. Each channel is one line between the square br
 | `image` | The name of a GIF or WebP file you uploaded to the `media` folder |
 | `images` | Several GIF or WebP files, in square brackets. They play one after another, round and round without stopping: each plays its whole animation once, then the next one comes on. A file in a folder inside `media` is written with the folder name, like `bianconeri/clip-1.gif` |
 
-Give each channel one of `youtube`, `spotify`, `image` or `images`.
+| `scroll` | Tall pictures (JPG, PNG, WebP or GIF), in square brackets, in order. They are stacked from top to bottom, each the width of the TV, and the TV scrolls slowly down through them, then starts again from the first |
+| `audio` | A song (M4A, MP3, AAC, OGG or WAV) to play with an `image`, `images` or `scroll` channel. It starts when a visitor tunes in and repeats on its own, whatever the pictures are doing; the TV's volume slider and the pager's Sound key control it. The pager shows the channel's `title` as now playing |
+
+Give each channel one of `youtube`, `spotify`, `image`, `images` or `scroll`, plus `audio` if you like.
 
 Separate the lines with commas, but put no comma after the last one. If something is wrong, GitHub shows a red cross on the commit and the "Check channels" run says what to fix; the site keeps working and shows the channels it can read.
 

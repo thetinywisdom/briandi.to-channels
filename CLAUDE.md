@@ -17,7 +17,7 @@ The owner's preview artifact cannot fetch from GitHub, so the preview build publ
 ```
 
 - `channel`: 2–12 or "U1" / "U2", each once.
-- Exactly one of `youtube` (any normal YouTube link), `spotify` (an open.spotify.com link), `image` (a .gif or .webp path under `media/`) or `images` (a list of such paths, played in a loop: each runs its full animation once, then the next; the site reads the frame timings from the file). Paths may include folders, e.g. `bianconeri/x.gif`.
+- Exactly one of `youtube` (any normal YouTube link), `spotify` (an open.spotify.com link), `image` (a .gif or .webp path under `media/`) or `images` (a list of such paths, played in a loop: each runs its full animation once, then the next; the site reads the frame timings from the file). Or `scroll` (a list of .jpg / .png / .webp / .gif paths stacked top to bottom at the tube's width and scrolled at 30 px/s, drawn twice so the loop is seamless). Optional `audio` (.m4a / .mp3 / .aac / .ogg / .opus / .wav) with any picture source: fetched as a blob when the channel first comes on air (GitHub raw does not label audio), looped independently, paused off air by the TV. Paths may include folders, e.g. `bianconeri/x.gif`. Large pictures are stored as web copies (channel 5's are 960 px wide; the owner's originals were 2160 px).
 - `title`: shown in the guide; about 12 characters fit.
 
 `node scripts/check.mjs` validates it; the "Check channels" GitHub workflow runs it on every push. The site skips entries it cannot use, so a mistake never breaks the page.
