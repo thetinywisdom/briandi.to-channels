@@ -2,7 +2,7 @@
 
 What plays on the channel TV at [briandi.to](https://github.com/thetinywisdom/briandi.to): the small portable TV on top of the orange one. It has 14 channels on its own keys: 1 to 12, U1 and U2. Channel 1 is always the channel guide and channel 2 is "How to use", both built into the site; the other 12 come from this repository.
 
-The site reads this repository straight from GitHub, so a change here shows on the site a few minutes after you commit it. Nothing has to be copied.
+The site reads this repository straight from GitHub, so a change here shows on the site a few minutes after you commit it. Nothing has to be copied. (Pictures and songs reach visitors through jsDelivr, a free fast service for files in public GitHub repositories; the site always asks for your latest commit.)
 
 ## Add or change a channel
 
@@ -15,7 +15,7 @@ Everything is in `channels.json`. Each channel is one line between the square br
     { "channel": 4, "title": "Drawing playlist", "spotify": "https://open.spotify.com/playlist/PLAYLIST_ID" },
     { "channel": 5, "title": "Sketch loop", "image": "sketch-loop.gif" },
     { "channel": "U1", "title": "Night walk", "image": "night-walk.webp" },
-    { "channel": 10, "title": "Bianconeri", "images": ["bianconeri/clip-1.gif", "bianconeri/clip-2.gif"] }
+    { "channel": 10, "title": "Bianconeri", "images": ["bianconeri/clip-1.mp4", "bianconeri/clip-2.mp4"] }
   ]
 }
 ```
@@ -27,7 +27,7 @@ Everything is in `channels.json`. Each channel is one line between the square br
 | `youtube` | A normal YouTube link (watch, youtu.be, Shorts or live links all work). It starts playing with sound when a visitor tunes in, at the TV's volume; the TV's volume slider and the Sound key on the pager control it. A browser that blocks sound (Safari sometimes does) plays it silently until the visitor's next click |
 | `spotify` | A normal Spotify link to a track, album, playlist, episode or show. Visitors press its play button; its volume is set in the Spotify player itself |
 | `image` | The name of a GIF or WebP file you uploaded to the `media` folder |
-| `images` | Several GIF or WebP files, in square brackets. They play one after another, round and round without stopping: each plays its whole animation once, then the next one comes on. A file in a folder inside `media` is written with the folder name, like `bianconeri/clip-1.gif` |
+| `images` | Several GIF, WebP or MP4 files, in square brackets. They play one after another, round and round without stopping: each plays its whole animation once, then the next one comes on. **MP4 is best**: the same clip is about a tenth the size of a GIF, so it starts much sooner (channel 10's GIFs went from 36 MB to 4 MB). Any sound in an MP4 is not played; use `audio` for a song. A file in a folder inside `media` is written with the folder name, like `bianconeri/clip-1.mp4` |
 
 | `scroll` | Tall pictures (JPG, PNG, WebP or GIF), in square brackets, in order. They are stacked from top to bottom, each the width of the TV, and the TV scrolls slowly down through them, then starts again from the first |
 | `audio` | A song (M4A, MP3, AAC, OGG or WAV) to play with an `image`, `images` or `scroll` channel. It starts when a visitor tunes in and repeats on its own, whatever the pictures are doing; the TV's volume slider and the pager's Sound key control it. The pager shows the channel's `title` as now playing |

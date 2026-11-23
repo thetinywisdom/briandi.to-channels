@@ -39,7 +39,8 @@ for (const [i, c] of (list || []).entries()) {
   if (c.images !== undefined && (!Array.isArray(c.images) || !c.images.length)) problems.push(`channel ${ch}: "images" should be a list of file names: [ "a.gif", "b.gif" ]`);
   const files = c.image ? [c.image] : Array.isArray(c.images) ? c.images : [];
   for (const file of files) {
-    if (typeof file !== 'string' || !/\.(gif|webp)$/i.test(file)) { problems.push(`channel ${ch}: ${JSON.stringify(file)} should be a .gif or .webp file`); continue; }
+    const okTypes = c.images ? /\.(gif|webp|mp4)$/i : /\.(gif|webp)$/i;
+    if (typeof file !== 'string' || !okTypes.test(file)) { problems.push(`channel ${ch}: ${JSON.stringify(file)} should be a .gif or .webp file${c.images ? ' (or an .mp4 clip)' : ''}`); continue; }
     const path = `media/${file}`;
     if (!existsSync(path)) problems.push(`channel ${ch}: ${path} is not in the media folder (check the spelling and capitals)`);
     else if (statSync(path).size > 8 * 1024 * 1024) console.warn(`channel ${ch}: ${path} is over 8 MB and will be slow to start`);

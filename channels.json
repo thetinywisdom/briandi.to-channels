@@ -18,17 +18,17 @@
     { "channel": 7, "title": "nobody tells this to beginners", "youtube": "https://www.youtube.com/watch?v=E1oZhEIrer4" },
     { "channel": 8, "title": "you don't need to be talented, you need to be obsessed", "youtube": "https://www.youtube.com/watch?v=mhB3qF7sNOs" },
     { "channel": 10, "title": "Bianconeri", "images": [
-        "bianconeri/del-piero-juventus.gif",
-        "bianconeri/bonucci-juve.gif",
-        "bianconeri/chiellini-dybala.gif",
-        "bianconeri/chiellini-szczesny.gif",
-        "bianconeri/del-piero-alessandro.gif",
-        "bianconeri/dybalamask-juventus.gif",
-        "bianconeri/flying-ronaldo.gif",
-        "bianconeri/gianluigi-buffon.gif",
-        "bianconeri/kenan-yildiz-yildiz.gif",
-        "bianconeri/pogba-dab.gif",
-        "bianconeri/real-madrid-mandzukic.gif"
+        "bianconeri/del-piero-juventus.mp4",
+        "bianconeri/bonucci-juve.mp4",
+        "bianconeri/chiellini-dybala.mp4",
+        "bianconeri/chiellini-szczesny.mp4",
+        "bianconeri/del-piero-alessandro.mp4",
+        "bianconeri/dybalamask-juventus.mp4",
+        "bianconeri/flying-ronaldo.mp4",
+        "bianconeri/gianluigi-buffon.mp4",
+        "bianconeri/kenan-yildiz-yildiz.mp4",
+        "bianconeri/pogba-dab.mp4",
+        "bianconeri/real-madrid-mandzukic.mp4"
       ] }
   ]
 }
